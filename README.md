@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Spark](https://img.shields.io/badge/Apache%20Spark-3.0+-orange.svg)](https://spark.apache.org/)
-[![Databricks](https://img.shields.io/badge/Databricks-Community-red.svg)](https://databricks.com/)
+[![Databricks](https://img.shields.io/badge/Databricks-free-red.svg)](https://databricks.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **Global analysis of the Steam marketplace to understand video game ecosystem trends**
