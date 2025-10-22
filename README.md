@@ -287,7 +287,7 @@ Key visualizations generated during analysis:
 
 ## 👤 Author
 
-**[Your Name]**
+**[Romano Albert]**
 - 🔗 [LinkedIn](https://www.linkedin.com/in/your-profile)
 - 💼 [Portfolio](https://your-portfolio.com)
 - 📧 [Email](mailto:terorra.ia.data@gmail.com)
@@ -302,6 +302,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **Jedha** for the online trainings
 - **Valve Corporation** for the Steam platform
 - **Databricks Community** for free cloud platform
 - **Apache Spark** for distributed computing framework
