@@ -108,15 +108,18 @@ numpy                # Numerical computing
 ```
 steam-marketplace-analysis/
 │
-├── 📓 notebook.ipynb                    # Main analysis notebook (Databricks)
-├── 📊 steam_game_output.json            # Raw dataset
-├── 📝 README.md                         # This file
-├── 🖼️ img/                              # Exported charts and graphs
-│   ├── genre_distribution.png
-│   ├── price_analysis.png
-│   ├── rating_correlation.png
-│   └── temporal_trends.png
-└── 📄 requirements.txt                  # Python dependencies (if local)
+├── 🖼️ img/                                  # Exported charts and graphs
+│   ├── 00_best_publisher.png
+│   ├── 01_10top_of_top_100_games.png
+│   ├── 02_10top_of_top_100_games_ratio.png
+│   ├── 03_year_game_release_bar.png
+│   └── etc ...
+│
+├── 📝 README.md                             # This file
+├── 📓 Steam_databricks.ipynb                # Main analysis notebook (Databricks)
+├── 📓 Steam_databricks_with_extra.ipynb     # analysis notebook with extra/open analysis (Databricks)
+└── 📄 structure.txt                         # data structure
+
 ```
 
 ---
