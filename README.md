@@ -111,7 +111,7 @@ steam-marketplace-analysis/
 ├── 📓 notebook.ipynb                    # Main analysis notebook (Databricks)
 ├── 📊 steam_game_output.json            # Raw dataset
 ├── 📝 README.md                         # This file
-├── 🖼️ visualizations/                   # Exported charts and graphs
+├── 🖼️ img/                              # Exported charts and graphs
 │   ├── genre_distribution.png
 │   ├── price_analysis.png
 │   ├── rating_correlation.png
@@ -137,12 +137,7 @@ steam-marketplace-analysis/
    - Go to "Data" tab
    - Upload `steam_game_output.json`
 
-4. **Create a cluster**
-   - Runtime: 13.3 LTS or later
-   - Spark 3.4.1
-   - Scala 2.12
-
-5. **Run the notebook**
+4. **Run the notebook**
    - Attach notebook to cluster
    - Execute cells sequentially
 
