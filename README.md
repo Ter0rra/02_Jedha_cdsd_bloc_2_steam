@@ -118,6 +118,7 @@ steam-marketplace-analysis/
 ├── 📝 README.md                             # This file
 ├── 📓 Steam_databricks.ipynb                # Main analysis notebook (Databricks)
 ├── 📓 Steam_databricks_with_extra.ipynb     # analysis notebook with extra/open analysis (Databricks)
+├── 📓 Steam_databricks.lnk                  # Main analysis notebook publish (Databricks community)
 └── 📄 structure.txt                         # data structure
 
 ```
@@ -131,6 +132,7 @@ steam-marketplace-analysis/
 1. **Create a Databricks account**
    - Go to [Databricks Free Edition](https://www.databricks.com/fr/learn/free-edition)
    - Sign up for free
+   - [publisher](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2654712914772717/3542083400711813/6640604564150917/latest.html)
 
 2. **Import the notebook**
    - Click "Import" in Databricks workspace
