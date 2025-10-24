@@ -15,8 +15,6 @@
 - [Project Structure](#-project-structure)
 - [Installation](#-installation)
 - [Methodology](#-methodology)
-- [Key Insights](#-key-insights)
-- [Visualizations](#-visualizations)
 - [Future Improvements](#-future-improvements)
 - [Author](#-author)
 
@@ -63,20 +61,14 @@ With **thousands of games** available and **millions of active users**, Steam re
 ### Source
 **Steam Marketplace** dataset containing comprehensive information about games available on the platform.
 
-### File
-| File | Description |
-|------|-------------|
-| `steam_game_output.json` | JSON dataset with detailed game information |
-
 ### Data Features
 The dataset includes:
 - **Game metadata**: Title, developer, publisher, release date
-- **Pricing**: Original price, discounts, regional pricing
-- **Ratings**: User reviews, metacritic scores
+- **Pricing**: initial price, discounts, price
+- **Ratings**: User reviews
 - **Categories**: Genres, tags, features
-- **Technical specs**: System requirements, supported platforms
-- **Engagement metrics**: Number of reviews, playtime statistics
-- **Content**: Descriptions, screenshots, videos
+- **Technical specs**: Supported platforms
+- **Engagement metrics**: Number of reviews, Number of owners
 
 ---
 
@@ -84,6 +76,7 @@ The dataset includes:
 
 ### Platform
 - **Databricks Community Edition** (Cloud-based analytics platform)
+- **Databricks Free Edition** (Cloud-based analytics platform)
 - **Apache Spark 3.0+** (Distributed computing framework)
 
 ### Languages & Libraries
@@ -118,7 +111,7 @@ steam-marketplace-analysis/
 ├── 📝 README.md                             # This file
 ├── 📓 Steam_databricks.ipynb                # Main analysis notebook (Databricks)
 ├── 📓 Steam_databricks_with_extra.ipynb     # analysis notebook with extra/open analysis (Databricks)
-├── 📓 Steam_databricks.lnk                  # Main analysis notebook publish (Databricks community)
+├── 📓 Steam_databricks.lnk                  # Main analysis notebook published (Databricks community)
 └── 📄 structure.txt                         # data structure
 
 ```
@@ -132,21 +125,22 @@ steam-marketplace-analysis/
 1. **Create a Databricks account**
    - Go to [Databricks Free Edition](https://www.databricks.com/fr/learn/free-edition)
    - Sign up for free
-   - [publisher](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2654712914772717/3542083400711813/6640604564150917/latest.html)
 
 2. **Import the notebook**
    - Click "Import" in Databricks workspace
    - Upload `notebook.ipynb`
 
-3. **Upload the dataset**
-   - Go to "Data" tab
-   - Upload `steam_game_output.json`
-
-4. **Run the notebook**
+3. **Run the notebook**
    - Attach notebook to cluster
    - Execute cells sequentially
 
-### Option 2: Local Setup (Alternative)
+### Option 2: Databricks community Edition (Alternative)   
+
+- Click on the link to open the notebook in Databricks Community Edition
+   - 1 st way =>  Steam_databricks.lnk
+   - 2 nd way => [Steam_datarick commnunity edition](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2654712914772717/3542083400711813/6640604564150917/latest.html)   
+
+### Option 3: Local Setup (Alternative)
 
 ```bash
 # Clone repository
@@ -164,86 +158,40 @@ jupyter notebook
 
 ## 🔬 Methodology
 
-### 1. Data Ingestion & Exploration
+### 0. Data Ingestion & Exploration
 - Load JSON data into Spark DataFrame
 - Schema analysis and data profiling
-- Initial data quality assessment
-- Missing value detection
 
-### 2. Data Cleaning & Preprocessing
-- Handle missing values and duplicates
-- Standardize data formats (dates, prices)
-- Parse nested JSON structures
-- Feature extraction and engineering
+### 1. Analysis at the "macro" level
+- Which publisher has released the most games on Steam?
+- What are the best rated games?
+- Are there years with more releases?
+- How are the prizes distributed?
+- What are the most represented languages?
+- Are there many games prohibited for children under 16/18?
+- Conclusion
 
-### 3. Exploratory Data Analysis (EDA)
-- **Genre Analysis**: Distribution and popularity
-- **Pricing Strategy**: Price ranges, discount patterns
-- **Rating Analysis**: Correlation with success metrics
-- **Temporal Trends**: Release patterns over time
-- **Platform Distribution**: Windows, Mac, Linux support
+### 2. Genre Analysis
+- What are the most represented genres?
+- Are there any genres that have a better positive/negative review ratio?
+- Do some publishers have favorite genres?
+- What are the most lucrative genres?
+- Conclusion
 
-### 4. Advanced Analytics
-- **Correlation Analysis**: Identify success factors
-- **Segmentation**: Cluster games by characteristics
-- **Trend Detection**: Identify emerging genres
-- **Price Optimization**: Pricing strategy analysis
+### 3. Platform analysis
+- Are most games available on Windows/Mac/Linux instead?
+- Do certain genres tend to be preferentially available on certain platforms?
+- Conclusion
 
-### 5. Visualization & Insights
+### 4. Conclusion of analysis
+
+### Extra. open analysis
+- *only available on Steam_Databricks_with_extra.ipynb*
+- free analysis on tags and category
+
+### *all part => Visualization & Insights*
 - Create compelling visualizations
-- Extract actionable insights
-- Formulate strategic recommendations
-
----
-
-## 📈 Key Insights
-
-> ⚠️ *Section to be completed after analysis*
-
-**Expected insights examples:**
-
-### Market Trends
-- 📈 Most popular game genres (Action, RPG, Strategy...)
-- 💰 Optimal pricing strategies by genre
-- ⭐ Correlation between price and ratings
-
-### Success Factors
-- 🎯 Features of highly-rated games
-- 🕐 Best release timing (seasonality)
-- 🌍 Regional preferences and differences
-
-### Competitive Landscape
-- 🏆 Top publishers and developers
-- 📊 Market share by genre
-- 🔥 Emerging trends and opportunities
-
----
-
-## 🖼️ Visualizations
-
-Key visualizations generated during analysis:
-
-1. **Genre Distribution** - Popularity of game categories
-2. **Price Analysis** - Pricing strategies across genres
-3. **Rating Correlation** - Factors influencing user ratings
-4. **Temporal Trends** - Game releases over time
-5. **Platform Distribution** - OS support analysis
-6. **Review Sentiment** - User satisfaction patterns
-
-*All visualizations available in `/visualizations` folder*
-
----
-
-## 🎯 Strategic Recommendations
-
-> ⚠️ *To be completed based on analysis results*
-
-**Example recommendations:**
-- 🎮 Target genre for new game launch
-- 💵 Suggested pricing strategy
-- 🗓️ Optimal release window
-- ⭐ Key features to implement
-- 🌐 Priority markets for launch
+   - *All visualizations available in `/img` folder*
 
 ---
 
@@ -274,7 +222,7 @@ Key visualizations generated during analysis:
 ### Why Databricks?
 - Cloud-based collaborative environment
 - Built-in Spark optimization
-- Free community edition available
+- Free & community edition available
 - Notebook version control
 
 ### Why Spark?
